@@ -1,45 +1,33 @@
-import {
-  AppBar,
-  Toolbar,
-  Box,
-  Button,
-  useTheme,
-  IconButton,
-  Drawer,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
-} from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import { useEffect, useState } from "react";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import { AppBar, Toolbar, Box, Button, useTheme, IconButton, Drawer, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import { useEffect, useState } from 'react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 export default function Navbar() {
   const theme = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 0);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      section.scrollIntoView({ behavior: 'smooth' });
       setDrawerOpen(false);
     }
   };
 
   const navItems = [
-    { id: "start", label: "Start" },
-    { id: "about", label: "Die Weißeritz" },
-    { id: "impressions", label: "Impressionen" },
-    { id: "guides", label: "Hörbeiträge" },
+    { id: 'start', label: 'Start' },
+    { id: 'about', label: 'Die Weißeritz' },
+    { id: 'impressions', label: 'Impressionen' },
+    { id: 'guides', label: 'Hörbeiträge' },
   ];
 
   return (
@@ -47,39 +35,29 @@ export default function Navbar() {
       <AppBar
         position="fixed"
         sx={{
-          backgroundColor: scrolled
-            ? `${theme.palette.secondary.main}CC`
-            : theme.palette.secondary.main,
-          backdropFilter: scrolled ? "blur(12px)" : "none",
-          WebkitBackdropFilter: scrolled ? "blur(12px)" : "none", // Safari
-          boxShadow: scrolled ? "0 2px 10px rgba(0,0,0,0.1)" : "none",
-          transition: "all 0.3s ease",
+          backgroundColor: scrolled ? `${theme.palette.secondary.main}CC` : theme.palette.secondary.main,
+          backdropFilter: scrolled ? 'blur(12px)' : 'none',
+          WebkitBackdropFilter: scrolled ? 'blur(12px)' : 'none', // Safari
+          boxShadow: scrolled ? '0 2px 10px rgba(0,0,0,0.1)' : 'none',
+          transition: 'all 0.3s ease',
         }}
       >
         <Toolbar
           sx={{
-            justifyContent: "center",
-            position: "relative",
+            justifyContent: 'center',
+            position: 'relative',
           }}
         >
           {isMobile ? (
             <>
-              <IconButton
-                color="inherit"
-                onClick={() => setDrawerOpen(true)}
-                sx={{ position: "absolute", right: 16 }}
-              >
+              <IconButton color="inherit" onClick={() => setDrawerOpen(true)} sx={{ position: 'absolute', right: 16 }}>
                 <MenuIcon />
               </IconButton>
             </>
           ) : (
-            <Box sx={{ display: "flex", gap: 3 }}>
+            <Box sx={{ display: 'flex', gap: 3 }}>
               {navItems.map((item) => (
-                <Button
-                  key={item.id}
-                  color="inherit"
-                  onClick={() => scrollToSection(item.id)}
-                >
+                <Button key={item.id} color="inherit" onClick={() => scrollToSection(item.id)}>
                   {item.label}
                 </Button>
               ))}
@@ -88,27 +66,20 @@ export default function Navbar() {
         </Toolbar>
       </AppBar>
 
-      <Drawer
-        anchor="right"
-        open={drawerOpen}
-        onClose={() => setDrawerOpen(false)}
-      >
+      <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
         <Box
           sx={{
             width: 250,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
             mt: 4,
           }}
         >
           <List>
             {navItems.map((item) => (
               <ListItem key={item.id} disablePadding>
-                <ListItemButton
-                  sx={{ textAlign: "center" }}
-                  onClick={() => scrollToSection(item.id)}
-                >
+                <ListItemButton sx={{ textAlign: 'center' }} onClick={() => scrollToSection(item.id)}>
                   <ListItemText primary={item.label} />
                 </ListItemButton>
               </ListItem>
