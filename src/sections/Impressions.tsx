@@ -14,7 +14,7 @@ export default function Impressions() {
     const [zoomedImage, setZoomedImage] = useState<string | null>(null);
 
     return (
-        <Box id="impressions" sx={{ py: 10, backgroundColor: theme.palette.secondary.light }}>
+        <Box id="impressions" sx={{ py: 10, backgroundColor: theme.palette.secondary.light, minHeight: '100vh' }}>
             <Container maxWidth="lg">
                 {zoomedImage && (
                     <Box
@@ -46,7 +46,9 @@ export default function Impressions() {
                         />
                     </Box>
                 )}
-                <Swiper slidesPerView={1}
+                
+                <Swiper
+                    slidesPerView={1}
                     spaceBetween={30}
                     loop
                     autoHeight
@@ -67,7 +69,7 @@ export default function Impressions() {
                                 sx={{
                                     width: "100%",
                                     height: "auto",
-                                    maxHeight: { xs: 360, sm: 420, md: 520 },
+                                    maxHeight: { xs: '70vh', md: '80vh' },
                                     objectFit: "contain",
                                     display: "block",
                                     borderRadius: 2,
