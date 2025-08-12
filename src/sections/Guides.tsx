@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { Accordion, AccordionDetails, AccordionSummary, Box, Grid, Typography } from "@mui/material";
 import { ReactSVG } from "react-svg";
-import audio2 from "../assets/audio/audio2.mp3";
+import audio7 from "../assets/audio/Station_7.mp3";
 import mapSvg from "../assets/map.svg";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import stationMap from "../assets/images/Station1/Map.jpeg"
-import caroussel1 from "../assets/images/Station1/1.jpeg"
-import caroussel2 from "../assets/images/Station1/2.jpeg"
-import caroussel3 from "../assets/images/Station1/3.jpeg"
+import stationMap from "../assets/images/Station7/Map.jpeg"
+import caroussel1 from "../assets/images/Station7/1.jpeg"
+import caroussel2 from "../assets/images/Station7/2.jpeg"
+// import caroussel3 from "../assets/images/Station1/3.jpeg"
 
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
@@ -29,25 +29,25 @@ type Station = {
 
 // TODO audios
 const audioFiles = [
-    audio2,
-    audio2,
-    audio2,
-    audio2,
-    audio2,
-    audio2,
-    audio2,
-    audio2,
-    audio2,
-    audio2,
+    audio7,
+    audio7,
+    audio7,
+    audio7,
+    audio7,
+    audio7,
+    audio7,
+    audio7,
+    audio7,
+    audio7,
 ];
 
 const stations: Station[] = audioFiles.map((audio, index) => ({
     id: `station_${index + 1}_circle`,
     title: `Station ${index + 1}`,
     audio,
-    disabled: index == 0 ? false : true,
+    disabled: index == 6 ? false : true,
     map: stationMap,
-    caroussel: [caroussel1, caroussel2, caroussel3]
+    caroussel: [caroussel1, caroussel2]
 }));
 
 export default function Guides() {
@@ -204,7 +204,6 @@ export default function Guides() {
                     stations.forEach((station) => {
                         const element = svg.querySelector(`[id^="${station.id}"]`);
                         if (element instanceof SVGElement) {
-                            console.log(element);
                             element.style.cursor = "pointer";
                             element.addEventListener("click", () => handleClick(station.id));
                         }

@@ -22,9 +22,17 @@ export default function Start() {
                                     Über die Weißeritz
                                 </Typography>
                                 <Typography variant="body1">
-                                    Die Weißeritz ist ein Fluss in Sachsen, der durch Dresden fließt.
-                                    Sie bietet wunderschöne Natur und ist ein beliebtes Ziel für
-                                    Spaziergänge und Radtouren.
+                                    Jeder kennt die Elbe. Aber Dresden hat noch einen zweiten Fluss:
+                                    die Weißeritz - ihre verborgene, wilde Schwester.
+                                    Auf ihrem Weg durch die Stadt ist sie ein Ort der extremen Gegensätze:
+                                    Einst romantisches Tal und Paradies der Maler, dann lautes Zentrum der
+                                    Industrialisierung und heute oft nur noch eine Gefahr hinter hohen Mauern.
+                                </Typography>
+                                <Typography variant="body1">
+                                    Ihre Geschichte erzählt von unbändiger Naturkraft, von Aufstieg und Vergessen,
+                                    von Auseinandersetzungen zwischen Mensch und Umwelt.
+                                    Dieser Audiowalk lädt Sie ein, genau diese verborgenen Geschichten zu entdecken und die Weißeritz mit neuen Augen zu sehen
+                                    und Ohren zu hören.
                                 </Typography>
                             </CardContent>
                         </Card>
@@ -34,16 +42,16 @@ export default function Start() {
                                     Audiowalk an der Weißeritz
                                 </Typography>
                                 <Typography variant="body1">
-                                    Audiowalks sind ortsgebundene Parcours, die Hörerinnen und Hörer über
-                                    Kommentare, Interviews und Klangbeiträge entlang einer definierten
-                                    Route zu <b>aktiven Teilnehmern</b> ihrer Raumerfahrung machen. Sie
-                                    verbinden Umweltbildung mit kreativen, partizipativen Methoden und
-                                    schaffen durch die landschaftliche Bildung einen unmittelbaren Bezug
-                                    zur konkreten Umgebung. Der Audiowalk an der Weißeritz fungiert also
-                                    als modernes Instrument landschaftlicher Bildung, das durch
-                                    multiperspektivische Beiträge und narrative Klanginszenierungen
-                                    ökologische, historische und soziale Dimensionen des urbanen
-                                    Fließgewässers hörbar und erlebbar macht.
+                                    Ein Audiowalk ist ein Hörerlebnis für unterwegs.
+                                    Sie folgen einer festgelegten Route, hören über Ihr Smartphone spannende Erzählungen,
+                                    die Stimmen von Experten und eine atmosphärische Klangkulisse,
+                                    die Sie tief in die Welt des Flusses eintauchen lässt. <br />
+                                    Unser Ziel ist es, den Blick hinter die hohen Schutzmauern zu lenken.
+                                    Der Walk führt Sie an Orte, an denen die verborgenen Geschichten der Weißeritz lebendig werden.
+                                    Sie erleben den Fluss in seiner Zerrissenheit zwischen Beton und Natur,
+                                    hören von seiner Vergangenheit als unermüdlicher „Arbeiter“
+                                    und entdecken seine heutige Rolle als ungenutzter Freiraum. <br />
+                                    Ein Spaziergang, der Ihre Wahrnehmung verändert und dem Fluss seine Stimme zurückgibt.
                                 </Typography>
                             </CardContent>
                         </Card>
