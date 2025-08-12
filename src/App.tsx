@@ -4,6 +4,7 @@ import Navbar from "./components/navbar";
 import Hero from "./sections/Hero";
 import Start from "./sections/Start";
 import Guides from "./sections/Guides";
+import Impressions from "./sections/Impressions";
 
 export default function App() {
 
@@ -15,6 +16,7 @@ export default function App() {
         <Hero />
         {/* Info Section */}
         <Start />
+        <Impressions />
         <Guides />
       </Box>
     </>

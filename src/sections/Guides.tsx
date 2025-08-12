@@ -66,7 +66,7 @@ export default function Guides() {
 
     function GuidesAccordions() {
         return (
-            <Box sx={{ width: "80%", mx: "auto", mb: 5 }}>
+            <Box sx={{ width: "80%", mx: "auto", mb: 5, }}>
                 {zoomedImage && (
                     <Box
                         sx={{
@@ -189,7 +189,7 @@ export default function Guides() {
     }
 
     return (
-        <Box id='guides' sx={{ width: "100%", mx: "auto" }}>
+        <Box id='guides' sx={{ width: "100%", mx: "auto", p:1 }}>
             <Typography
                 variant="h2"
                 sx={{
