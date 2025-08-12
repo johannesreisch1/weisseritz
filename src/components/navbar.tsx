@@ -71,7 +71,6 @@ export default function Navbar() {
               >
                 <MenuIcon />
               </IconButton>
-              <Box sx={{ fontWeight: "bold" }}>Logo</Box>
             </>
           ) : (
             <Box sx={{ display: "flex", gap: 3 }}>

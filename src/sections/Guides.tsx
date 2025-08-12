@@ -114,6 +114,8 @@ export default function Guides() {
                                         alt={station.title}
                                         sx={{
                                             maxHeight: 600,
+                                            width: "100%",
+                                            maxWidth: { xs: "100%", md: 600 },
                                             height: "auto",
                                             borderRadius: 2,
                                             boxShadow: "0 4px 10px rgba(0,0,0,0.15)",
@@ -146,11 +148,12 @@ export default function Guides() {
                                 <Grid size={{ xs: 12, md: 6 }} sx={{ display: "flex", justifyContent: "center" }}>
                                     <Swiper slidesPerView={1}
                                         spaceBetween={30}
-                                        loop={true}
+                                        loop
+                                        autoHeight
                                         pagination={{
                                             clickable: true,
                                         }}
-                                        navigation={true}
+                                        navigation
                                         modules={[Pagination, Navigation]}
                                         className="mySwiper"
                                     >
@@ -162,6 +165,13 @@ export default function Guides() {
                                                     src={img}
                                                     alt={`Bild ${i + 1}`}
                                                     sx={{
+                                                        width: "100%",
+                                                        height: "auto",
+                                                        maxHeight: { xs: 360, sm: 420, md: 520 },
+                                                        objectFit: "contain",
+                                                        display: "block",
+                                                        borderRadius: 2,
+                                                        boxShadow: "0 2px 6px rgba(0,0,0,0.15)",
                                                     }}
                                                 />
                                             </SwiperSlide>
