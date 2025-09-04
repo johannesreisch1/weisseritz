@@ -5,6 +5,7 @@ import Hero from './sections/Hero';
 import Start from './sections/Start';
 import Guides from './sections/Guides';
 import Impressions from './sections/Impressions';
+import Footer from './sections/Footer';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Start />
         <Impressions />
         <Guides />
+        <Footer />
       </Box>
     </>
   );
