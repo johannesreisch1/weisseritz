@@ -38,7 +38,7 @@ export default function Hero() {
           Audiowalk Weißeritz
         </Typography>
         <Typography variant="h5" sx={{ mt: 2 }}>
-          Ein Gewässer neu entdecken
+          Ein urbanes Gewässer neu erleben
         </Typography>
       </Box>
     </Box>
